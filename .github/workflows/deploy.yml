@@ -1,0 +1,63 @@
+# @format
+
+name: build
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: "13.10"
+      - name: Install npm and run
+        run: |
+          npm i
+          npm run build
+        env:
+          CI: true
+      - name: Publish to Github Packages Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: ry3iezn/calendar_app_test/calendarfrontserver
+          registry: ghcr.io
+          username: secrets.USERNAME_NAME
+          password: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: ./Dockerfile
+          tags: v1
+      - name: Deploy package to your instance
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_USERNAME: secrets.USERNAME_NAME
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: 139.162.251.16
+          username: root
+          password: Linode123#Linode123#
+          port: 22
+          envs: GITHUB_USERNAME, GITHUB_TOKEN
+          script: |
+            docker stop $(docker ps -a -q)
+            docker system prune -a
+            cd calendarApp/
+            git pull https://github.com/RY3IEZN/calendar_app_test.git dev
+            sudo docker build -t thefrontent:$(date +'%Y-%m-%d') .
+            sudo docker run -d -p 3000:3000 thefrontent:$(date +'%Y-%m-%d')
+
+# SADASDASDA
+# SADASDA
+
+# script: |
+#              docker remove all images- Please find the command and replace this line
+#             docker stop $(docker ps -a -q)
+#             cd calendarApp/
+#             cd dinnerwithfriends.mobile/
+#             git pull https://github.com/RY3IEZN/calendar_app_test.git
+#             sudo docker build -t thefrontent:$(date +'%Y-%m-%d') .
+#             sudo docker run -d -p 3000:3000 thefrontent:$(date +'%Y-%m-%d')
