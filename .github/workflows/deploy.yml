@@ -54,7 +54,8 @@ jobs:
             docker stop $(docker ps -a -q)
             docker system prune -a -f
             cd calendarApp/
-            git pull https://github.com/RY3IEZN/calendarTestApp.git 
+            git pull https://github.com/RY3IEZN/calendarTestApp.git
+            cd calendarTestApp
             sudo docker build -t thefrontent:$(date +'%Y-%m-%d') .
             sudo docker run -d -p 3000:3000 thefrontent:$(date +'%Y-%m-%d')
 
