@@ -35,7 +35,7 @@ jobs:
         uses: appleboy/ssh-action@master
         env:
           GITHUB_USERNAME: secrets.USERNAME_NAME
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_TOKEN }}
         with:
           host: secrets.HOST_IP
           username: secrets.HOST_USER
