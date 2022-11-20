@@ -37,9 +37,9 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
       - name: Build Docker Image
-        run: docker build . --file Dockerfile --tag $DOCKERHUB_USERNAME/$REPOSITORY_NAME:${{ steps.date.outputs.date }}
+        run: docker build . --file Dockerfile --tag $DOCKERHUB_USERNAME/$REPOSITORY_NAME:v2
       - name: Push Docker Image to Docker Hub
-        run: docker push $DOCKERHUB_USERNAME/$REPOSITORY_NAME:${{ steps.date.outputs.date }}
+        run: docker push $DOCKERHUB_USERNAME/$REPOSITORY_NAME:v2
       - name: Deploy package to your instance
         uses: appleboy/ssh-action@master
         env:
@@ -53,14 +53,14 @@ jobs:
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
             cd calendarApp/
-            docker compose down
+            docker-compose down
             docker stop $(docker ps -a -q)
             docker system prune -a
             rm -r dinnerwithfriends.web/
             git clone https://github.com/workshopapps/dinnerwithfriends.web
             cd dinnerwithfriends.web/
-            sudo docker build -t thefrontent:$(date +'%Y-%m-%d--%M-%S') .
-            sudo docker run -d -p 3000:3000 thefrontent:$(date +'%Y-%m-%d--%M-%S')
+            sudo docker build -t thefrontent:v2 .
+            sudo docker run -d -p 3000:3000 thefrontent:v2
             echo "refresh the page and check"
 
 
