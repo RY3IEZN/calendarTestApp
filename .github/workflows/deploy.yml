@@ -62,3 +62,6 @@ jobs:
             sudo docker build -t thefrontent:$(date +'%Y-%m-%d--%M-%S') .
             sudo docker run -d -p 3000:3000 thefrontent:$(date +'%Y-%m-%d--%M-%S')
             echo "refresh the page and check"
+
+
+#ddddddd
