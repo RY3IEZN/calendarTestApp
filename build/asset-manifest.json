@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb23ef05.css",
+    "main.js": "/static/js/main.923014ba.js",
+    "static/media/video.png": "/static/media/video.09e8c6d43c94763644a1.png",
+    "static/media/Home.png": "/static/media/Home.007a9641775ba93d79a6.png",
+    "static/media/signup_image.webp": "/static/media/signup_image.d371d045813ca89b4152.webp",
+    "static/media/contact-us.jpg": "/static/media/contact-us.af9006f2277328d1bb5a.jpg",
+    "static/media/Mobile.png": "/static/media/Mobile.425bf361a5ccdaab8f42.png",
+    "static/media/phone-group-desktop.png": "/static/media/phone-group-desktop.d12a2a3d62fff528143c.png",
+    "static/media/ForgetPasswordImage.png": "/static/media/ForgetPasswordImage.0c3339c8fc42378841e6.png",
+    "static/media/errorImg.png": "/static/media/errorImg.cf4a57a6866b327c767f.png",
+    "static/media/HomeDashboard.png": "/static/media/HomeDashboard.245d5c94867a24c35fe6.png",
+    "static/media/VectorsHome.png": "/static/media/VectorsHome.c3407c03e47bff28916c.png",
+    "static/media/phone-group-mobile.png": "/static/media/phone-group-mobile.f1c88d154e9151864f1f.png",
+    "static/media/inviteeImg3.png": "/static/media/inviteeImg3.960a00cb865a87c39bff.png",
+    "static/media/inviteeImg2.png": "/static/media/inviteeImg2.4ac72f94bb37c3f45d44.png",
+    "static/media/inviteeImg4.png": "/static/media/inviteeImg4.a420e1d06957cc5b5ecb.png",
+    "static/media/inviteeImg1.png": "/static/media/inviteeImg1.7dad42a3b80a66ed0dd1.png",
+    "static/media/SubHome.png": "/static/media/SubHome.fb55c269e0ff61c57560.png",
+    "static/media/Avatar.png": "/static/media/Avatar.ad2a53526ab5507d84e0.png",
+    "static/media/closedEventInvites.png": "/static/media/closedEventInvites.de4c6f12eefb48d5fcc2.png",
+    "static/media/image.png": "/static/media/image.3eb2a6af774bdfc1f486.png",
+    "static/media/icon-3.svg": "/static/media/icon-3.35b60c9500e6d490eeaeaf784054645b.svg",
+    "static/media/icon-1.svg": "/static/media/icon-1.328b828ae2f775c36ee8c52416154b6f.svg",
+    "static/media/icon-2.svg": "/static/media/icon-2.73a832affa51aa160b7f5485f9304d92.svg",
+    "static/media/icon-4.svg": "/static/media/icon-4.c520448df4f73b5cde8f8f9a6bc91f94.svg",
+    "static/media/success-icon.svg": "/static/media/success-icon.fba4d818da6076f0f4e58c8638653f81.svg",
+    "static/media/google.svg": "/static/media/google.04e48b498d646f980bf3cc0913b7edd7.svg",
+    "index.html": "/index.html",
+    "static/media/nigeria.svg": "/static/media/nigeria.7686c9b08388567539442c847fac5db9.svg",
+    "static/media/chevron.svg": "/static/media/chevron.74100ecc28fc51135ffbd717410a5a70.svg",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.2d6e3a7039452b8ca663670d0e352906.svg",
+    "main.eb23ef05.css.map": "/static/css/main.eb23ef05.css.map",
+    "main.923014ba.js.map": "/static/js/main.923014ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb23ef05.css",
+    "static/js/main.923014ba.js"
+  ]
+}
